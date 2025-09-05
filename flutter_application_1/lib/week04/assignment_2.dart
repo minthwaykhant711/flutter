@@ -53,7 +53,10 @@ class _Assign2State extends State<Assign2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calculator', style: TextStyle(color: Colors.white)),
+        title: Text(
+          'Calculator',
+          style: TextStyle(color: Colors.white, fontSize: 28),
+        ),
         backgroundColor: Colors.blue,
       ),
 
