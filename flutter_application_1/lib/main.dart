@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/week05/assignment1.dart';
+import 'package:flutter_application_1/week05/assign1.dart';
 
 void main() {
-  runApp(MaterialApp(home: Assignment1()));
+  runApp(MaterialApp(home: Assign1()));
 }
