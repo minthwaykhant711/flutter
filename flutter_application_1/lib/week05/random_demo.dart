@@ -57,8 +57,7 @@ class _RandomDemoState extends State<RandomDemo> {
                 decoration: InputDecoration(hintText: 'max'),
               ),
               SizedBox(height: 8),
-              Text(result, style: TextStyle(fontSize: 20)),
-              SizedBox(height: 8),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -70,6 +69,10 @@ class _RandomDemoState extends State<RandomDemo> {
                   FilledButton(onPressed: clear, child: Text('Clear')),
                 ],
               ),
+
+              SizedBox(height: 10),
+
+              Text(result, style: TextStyle(fontSize: 20)),
             ],
           ),
         ),
