@@ -14,8 +14,8 @@ class SingleChildDemo extends StatelessWidget {
           color: Colors.yellow,
           padding: EdgeInsets.all(16),
           margin: EdgeInsets.all(8),
-          alignment: Alignment.center,
-          child: Text('Single child'),
+          alignment: Alignment(0, 0),
+          child: Icon(Icons.heart_broken, color: Colors.red),
         ),
       ),
     );
