@@ -80,10 +80,14 @@ flutter:
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
+  flutter:
+  uses-material-design: true
+
   fonts:
-      -family : Sevillana
-      fonts :
+    - family: Sevillana
+      fonts:
         - asset: fonts/Sevillana-Regular.ttf
+
         
   #         weight: 700
   #
