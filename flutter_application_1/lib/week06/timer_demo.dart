@@ -9,15 +9,24 @@ class TimerDemo extends StatefulWidget {
 }
 
 class _TimerDemoState extends State<TimerDemo> {
-  String message = 'Start';
+  // String message = 'Start';
+  int count = 5;
 
   @override
   void initState() {
     super.initState();
-    //create a timer
-    Timer(Duration(seconds: 3), () {
+    //   //create a timer
+    //   Timer(Duration(seconds: 3), () {
+    //     setState(() {
+    //       message = 'Stop';
+    //     });
+    //   });
+    Timer.periodic(Duration(seconds: 1), (Timer timer) {
       setState(() {
-        message = 'Stop';
+        count--;
+        if (count == 0) {
+          timer.cancel();
+        }
       });
     });
   }
@@ -28,7 +37,7 @@ class _TimerDemoState extends State<TimerDemo> {
       body: SafeArea(
         child: Align(
           alignment: Alignment.topCenter,
-          child: Text(message, style: TextStyle(fontSize: 30)),
+          child: Text(count.toString(), style: TextStyle(fontSize: 30)),
         ),
       ),
     );

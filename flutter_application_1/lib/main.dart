@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_application_1/week06/timer_demo.dart';
+import 'package:flutter_application_1/week06/assign_1.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: TimerDemo()));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Assign1()));
 }
