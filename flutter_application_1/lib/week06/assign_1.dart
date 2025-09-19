@@ -15,7 +15,11 @@ class Assign1 extends StatelessWidget {
         children: [
           Expanded(
             flex: 4,
-            child: Image.asset('assets/images/baking.jpg', fit: BoxFit.fill),
+            child: Image.asset(
+              'assets/images/baking.jpg',
+              fit: BoxFit.cover,
+              alignment: Alignment.bottomCenter,
+            ),
           ),
           Spacer(),
 
@@ -77,8 +81,6 @@ class Assign1 extends StatelessWidget {
                   ),
                 ),
 
-                SizedBox(height: 15),
-
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Column(
@@ -116,8 +118,9 @@ class Assign1 extends StatelessWidget {
                           children: [
                             Ink(
                               decoration: const ShapeDecoration(
-                                shape: CircleBorder(),
-                                color: Colors.grey,
+                                shape: CircleBorder(
+                                  side: BorderSide(color: Colors.grey),
+                                ),
                               ),
                               child: IconButton(
                                 onPressed: () {},
@@ -127,8 +130,9 @@ class Assign1 extends StatelessWidget {
                             const SizedBox(width: 15),
                             Ink(
                               decoration: const ShapeDecoration(
-                                shape: CircleBorder(),
-                                color: Colors.grey,
+                                shape: CircleBorder(
+                                  side: BorderSide(color: Colors.grey),
+                                ),
                               ),
                               child: IconButton(
                                 onPressed: () {},

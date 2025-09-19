@@ -19,6 +19,7 @@ class ButtonDemo extends StatelessWidget {
                   },
                   icon: Icon(Icons.volume_up, color: Colors.red),
                 ),
+
                 Ink(
                   decoration: ShapeDecoration(
                     shape: CircleBorder(),
@@ -29,6 +30,7 @@ class ButtonDemo extends StatelessWidget {
                     icon: Icon(Icons.android),
                   ),
                 ),
+
                 SizedBox(width: 8),
                 Ink(
                   decoration: ShapeDecoration(
