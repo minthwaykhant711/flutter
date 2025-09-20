@@ -64,7 +64,7 @@ class _Assign2State extends State<Assign2> {
             alignment: Alignment.topCenter,
             child: Column(
               children: [
-                Text(timeleft.toString()),
+                Text(timeleft.toStringAsFixed(2)),
                 SizedBox(height: 8),
                 Text(
                   'Click =  $count',
@@ -83,13 +83,13 @@ class _Assign2State extends State<Assign2> {
                         'Click',
                         style: TextStyle(color: Colors.white),
                       ),
-                      icon: Icon(Icons.ads_click),
+                      icon: Icon(Icons.touch_app),
                     ),
 
                     OutlinedButton.icon(
                       onPressed: startGame,
                       label: Text('Play', style: TextStyle(color: Colors.red)),
-                      icon: Icon(Icons.replay, color: Colors.black),
+                      icon: Icon(Icons.refresh, color: Colors.black),
                     ),
                   ],
                 ),
