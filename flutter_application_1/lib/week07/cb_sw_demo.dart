@@ -10,6 +10,22 @@ class CbSwDemo extends StatefulWidget {
 class _CbSwDemoState extends State<CbSwDemo> {
   //state variable for checkbox
   bool cb = false;
+  bool sw = false;
+
+  //Function to update the checkbox
+  void updateCB(bool? value) {
+    setState(() {
+      cb = value!;
+    });
+  }
+
+  //function to update the switch
+  void updateSW(bool? value) {
+    setState(() {
+      sw = value!;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,8 +34,14 @@ class _CbSwDemoState extends State<CbSwDemo> {
           children: [
             Row(
               children: [
-                Checkbox(value: cb, onChanged: (bool? value) {}),
-                Text('Checkbox : '),
+                Checkbox(value: cb, onChanged: updateCB),
+                Text('Checkbox : $cb'),
+              ],
+            ),
+            Row(
+              children: [
+                Switch(value: sw, onChanged: updateSW),
+                Text('Switch : $sw'),
               ],
             ),
           ],
