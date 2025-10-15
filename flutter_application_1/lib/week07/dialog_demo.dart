@@ -10,6 +10,7 @@ class DialogDemo extends StatefulWidget {
 class _DialogDemoState extends State<DialogDemo> {
   String date = '';
   String time = '';
+  String status = '';
   void showDate() async {
     DateTime? dt = await showDatePicker(
       context: context,
@@ -36,6 +37,43 @@ class _DialogDemoState extends State<DialogDemo> {
     }
   }
 
+  void showAlert() async {
+    await showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Warning'),
+          content: Column(
+            children: [
+              Image.network(
+                width: 80,
+                'https://icons.iconarchive.com/icons/awicons/vista-artistic/256/delete-icon.png',
+              ),
+              Text('Are you sure?'),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                setState(() {
+                  status = 'All files deleted';
+                });
+              },
+              child: Text('OK'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Cancel'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,6 +85,14 @@ class _DialogDemoState extends State<DialogDemo> {
 
             FilledButton(onPressed: showTime, child: Text('Select Time')),
             Text(time),
+
+            FilledButton(
+              onPressed: showAlert,
+              style: FilledButton.styleFrom(backgroundColor: Colors.red),
+              child: Text('Delete'),
+            ),
+
+            Text(status, style: const TextStyle(color: Colors.red)),
           ],
         ),
       ),
