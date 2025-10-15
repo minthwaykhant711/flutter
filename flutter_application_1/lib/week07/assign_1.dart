@@ -24,9 +24,10 @@ class _Assign1State extends State<Assign1> {
       setState(() {
         _startDate = dt;
         fromDate = '${dt.day}/${dt.month}/${dt.year}';
-
-        _endDate = _startDate;
-        toDate = fromDate;
+        if (_startDate.isAfter(_endDate)) {
+          _endDate = _startDate;
+          toDate = fromDate;
+        }
       });
     }
   }
