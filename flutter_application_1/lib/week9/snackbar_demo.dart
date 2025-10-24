@@ -12,7 +12,16 @@ class SnackbarDemo extends StatelessWidget {
           child: FilledButton(
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('You have completed your task')),
+                SnackBar(
+                  duration: Duration(seconds: 2),
+                  content: Text('You have completed your task'),
+                  action: SnackBarAction(
+                    label: 'Undo',
+                    onPressed: () {
+                      debugPrint('Undo Action!');
+                    },
+                  ),
+                ),
               );
             },
             child: Text("Show"),
